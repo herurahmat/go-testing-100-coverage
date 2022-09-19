@@ -2,7 +2,6 @@ package advance
 
 import (
 	"fmt"
-	"log"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -21,7 +20,6 @@ func TestCreateCart(t *testing.T) {
 		body.Discount = 1000000
 		actual := CreateNewCart(body.ProductName, body.Qty, body.Price, body.Discount)
 		assert.Equal(t, 0, actual.GetDiscount())
-		log.Println("Discount 0", actual.GetDetailCart(), actual.Discount)
 	})
 
 	t.Run("Success created cart", func(t *testing.T) {
